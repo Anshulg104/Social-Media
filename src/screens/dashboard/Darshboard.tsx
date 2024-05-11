@@ -6,6 +6,7 @@ import {
   MaterialIcons,
 } from "@expo/vector-icons";
 import { LoginScreen } from "../auth/login/LoginScreen";
+import { ChatScreen } from "../chatScreen/ChatScreen";
 
 const buttons = [
   { screenName: "OtherScreen1", icon: "earth", size: 28 },
@@ -30,7 +31,7 @@ const Dashboard: React.FC = () => {
       case "profile":
         return <LoginScreen />;
       case "chat":
-        return <LoginScreen />;
+        return <ChatScreen />;
       case "settings":
         return <LoginScreen />;
       default:

@@ -9,48 +9,38 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import FeatherIcon from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 
 const users = [
   {
     img: "",
     name: "Bell Burgess",
-    phone: "+1 (887) 478-2693",
+    message: "Hey, how are you?",
   },
   {
     img: "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=256&h=256&q=80",
     name: "Bernard Baker",
-    phone: "+1 (862) 581-3022",
+    message: "What's up?",
   },
   {
     img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=256&h=256&q=80",
     name: "Elma Chapman",
-    phone: "+1 (913) 497-2020",
+    message: "Hi there!",
   },
   {
     img: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     name: "Knapp Berry",
-    phone: "+1 (951) 472-2967",
+    message: "Nice weather today!",
   },
   {
     img: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=256&h=256&q=80",
     name: "Larson Ashbee",
-    phone: "+1 (972) 566-2684",
+    message: "Did you watch the game last night?",
   },
   {
     img: "",
     name: "Lorraine Abbott",
-    phone: "+1 (959) 422-3635",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-    name: "Rosie Arterton",
-    phone: "+1 (845) 456-2237",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    name: "Shelby Ballard",
-    phone: "+1 (824) 467-3579",
+    message: "How's your day going?",
   },
 ];
 
@@ -75,15 +65,13 @@ export const ChatScreen = () => {
   }, [input]);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff", paddingTop: 30 }}>
       <View style={styles.container}>
         <View style={styles.searchWrapper}>
+          <Text style={styles.title}>Chats</Text>
           <View style={styles.search}>
             <View style={styles.searchIcon}>
-              {/* <FeatherIcon
-                color="#848484"
-                name="search"
-                size={17} /> */}
+              <Feather color="#848484" name="search" size={17} />
             </View>
 
             <TextInput
@@ -102,7 +90,7 @@ export const ChatScreen = () => {
 
         <ScrollView contentContainerStyle={styles.searchContent}>
           {filteredRows.length ? (
-            filteredRows.map(({ img, name, phone }, index) => {
+            filteredRows.map(({ img, name, message }, index) => {
               return (
                 <View key={index} style={styles.cardWrapper}>
                   <TouchableOpacity
@@ -127,7 +115,7 @@ export const ChatScreen = () => {
                       <View style={styles.cardBody}>
                         <Text style={styles.cardTitle}>{name}</Text>
 
-                        <Text style={styles.cardPhone}>{phone}</Text>
+                        <Text style={styles.cardMessage}>{message}</Text>
                       </View>
 
                       {/* <View style={styles.cardAction}>
@@ -156,6 +144,12 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: 0,
+  },
+  title: {
+    fontSize: 32,
+    fontWeight: "700",
+    color: "#1d1d1d",
+    marginBottom: 12,
   },
   /** Search */
   search: {
@@ -192,7 +186,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   searchContent: {
-    paddingLeft: 24,
+    paddingHorizontal: 20,
   },
   searchEmpty: {
     textAlign: "center",
@@ -237,7 +231,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#000",
   },
-  cardPhone: {
+  cardMessage: {
     fontSize: 15,
     lineHeight: 20,
     fontWeight: "500",
