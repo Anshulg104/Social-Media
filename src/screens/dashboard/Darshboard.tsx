@@ -7,6 +7,7 @@ import {
 } from "@expo/vector-icons";
 import { LoginScreen } from "../auth/login/LoginScreen";
 import { ChatScreen } from "../chatScreen/ChatScreen";
+import ProfileScreen from "../ProfileScreen/ProfileScreen";
 
 const buttons = [
   { screenName: "OtherScreen1", icon: "earth", size: 28 },
@@ -29,7 +30,7 @@ const Dashboard: React.FC = () => {
       case "add":
         return <LoginScreen />;
       case "profile":
-        return <LoginScreen />;
+        return <ProfileScreen />;
       case "chat":
         return <ChatScreen />;
       case "settings":
