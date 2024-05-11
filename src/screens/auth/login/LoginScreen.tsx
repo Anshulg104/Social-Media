@@ -8,12 +8,19 @@ import {
   TextInput,
 } from "react-native";
 import Button from "../../../components/shared/button/Button";
+import { useNavigation } from "expo-router";
 
 export const LoginScreen = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
+  const navigation:any=useNavigation()
+
+  const handlesignin = () => {
+    // Your logic here
+    navigation.navigate("home");
+  };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff", paddingTop: 20 }}>
       <View style={styles.container}>
@@ -55,7 +62,7 @@ export const LoginScreen = () => {
             />
           </View>
 
-          <Button />
+          <Button text={"sign in"} handlebutton={handlesignin} />
 
           <TouchableOpacity
             onPress={() => {
