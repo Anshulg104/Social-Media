@@ -67,6 +67,7 @@ export const LoginScreen = () => {
           <TouchableOpacity
             onPress={() => {
               // handle link
+              navigation.navigate("signup");
             }}
           >
             <Text style={styles.formFooter}>
