@@ -15,7 +15,7 @@ export const LoginScreen = () => {
     email: "",
     password: "",
   });
-  const navigation:any=useNavigation()
+  const navigation: any = useNavigation();
 
   const handlesignin = () => {
     // Your logic here
@@ -32,7 +32,7 @@ export const LoginScreen = () => {
 
         <View style={styles.form}>
           <View style={styles.input}>
-            <Text style={styles.inputLabel}>Email address</Text>
+            <Text style={styles.inputLabel}>Phone number</Text>
 
             <TextInput
               autoCapitalize="none"
@@ -40,7 +40,7 @@ export const LoginScreen = () => {
               clearButtonMode="while-editing"
               keyboardType="email-address"
               onChangeText={(email) => setForm({ ...form, email })}
-              placeholder="@gmail.com"
+              placeholder="+91"
               placeholderTextColor="#6b7280"
               style={styles.inputControl}
               value={form.email}

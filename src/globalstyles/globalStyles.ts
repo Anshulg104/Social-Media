@@ -2,6 +2,11 @@ import { Dimensions, StyleSheet, useColorScheme } from "react-native";
 
 export const globalStyle = () => {
   return StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: "#fff",
+      paddingTop: 30,
+    },
     formFooter: {
       fontSize: 15,
       fontWeight: "500",
