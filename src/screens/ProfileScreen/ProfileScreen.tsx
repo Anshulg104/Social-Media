@@ -6,7 +6,7 @@ import { ScrollView } from 'react-native'
 
 function ProfileScreen() {
   return (
-<ScrollView style={{flex:1 ,paddingHorizontal:10,paddingTop:30}}>
+<ScrollView style={{flex:1 ,paddingHorizontal:10,paddingTop:40 ,backgroundColor: "#fff"}}>
 <Profiledetails/>
   <Profilepost/>
 </ScrollView>
