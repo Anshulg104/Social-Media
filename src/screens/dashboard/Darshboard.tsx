@@ -9,10 +9,11 @@ import { LoginScreen } from "../auth/login/LoginScreen";
 import { ChatScreen } from "../chatScreen/ChatScreen";
 import ProfileScreen from "../ProfileScreen/ProfileScreen";
 import SettingsScreen from "../SettingsScreen/SettingsScreen";
+import PostScreen from "../post/PostScreen";
 
 const buttons = [
-  { screenName: "OtherScreen1", icon: "earth", size: 28 },
-  { screenName: "add-circle-outline", icon: "plus-circle-outline", size: 28 },
+  { screenName: "Home", icon: "earth", size: 28 },
+  { screenName: "add", icon: "plus-circle-outline", size: 28 },
 
   { screenName: "profile", icon: "account-circle-outline", size: 28 },
   { screenName: "chat", icon: "message-reply-text-outline", size: 26 },
@@ -26,10 +27,8 @@ const Dashboard: React.FC = () => {
     switch (activeScreen) {
       case "Home":
         return <LoginScreen />;
-      case "OtherScreen1":
-        return <LoginScreen />;
       case "add":
-        return <LoginScreen />;
+        return <PostScreen />;
       case "profile":
         return <ProfileScreen />;
       case "chat":
