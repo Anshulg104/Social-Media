@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View,Image,StyleSheet } from 'react-native'
+import { Feather } from '@expo/vector-icons';
 
 const Profiledetails = () => {
   return (
@@ -8,7 +9,8 @@ const Profiledetails = () => {
          
         <View style={{width:75,alignItems:'center',marginTop:40}}>
         <Text style={{fontSize:24,fontWeight:600}}>100</Text>
-        <Text style={{fontSize:16,fontWeight:400}}>followers</Text>
+        <Text style={{fontSize:16,fontWeight:400}}>
+          followers</Text>
         </View>
 
         <View style={styles.header}>
@@ -31,6 +33,7 @@ const Profiledetails = () => {
        
         </View>
         <Text style={styles.username}>JohnDoe</Text>
+        <Text style={styles.gmail}><Feather name="phone" size={14} color="black" />&nbsp;8101844250</Text>
      
       <View style={styles.userInfo}>
         <Text style={{fontSize:18,fontWeight:"600",marginBottom:5}}>
@@ -40,8 +43,8 @@ const Profiledetails = () => {
         Adventurous soul with an eye for beauty in simplicity. 
         Constantly seeking inspiration and growth in life's small wonders.
         </Text>
-        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5}}>
-          Gallery
+        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5,marginTop:10}}>
+          Posts
         </Text>
       </View>
     </View>
@@ -55,6 +58,12 @@ const styles = StyleSheet.create({
     header: {
       alignItems: "center",
       paddingTop: 20,
+    },
+    title: {
+      fontSize: 32,
+      fontWeight: "700",
+      color: "#1d1d1d",
+      marginBottom: 12,
     },
     profileIcon: {
       width: 100,
@@ -76,14 +85,20 @@ const styles = StyleSheet.create({
         backgroundColor: "#22C55E",
       },
     userInfo: {
-      paddingHorizontal: 5,
-      marginTop: 20,
+      paddingHorizontal: 9,
+      marginTop: 10,
     },
     username: {
       fontSize: 20,
       fontWeight: "bold",
-      marginVertical: 10,
-      textAlign:"center"
+      textAlign:"center",
+      marginTop:5
+    },
+    gmail: {
+      fontSize: 14,
+      fontWeight: "400",
+      textAlign:"center",
+      marginBottom:10
     },
     bio: {
       fontSize: 16,

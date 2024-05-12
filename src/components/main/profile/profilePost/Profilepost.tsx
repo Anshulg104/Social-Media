@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, Image, StyleSheet, Dimensions } from 'react-native';
+import { ScrollView, View, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -16,9 +16,9 @@ const Profilepost = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {images.map((image, index) => (
-        <View key={image.id} style={styles.imageContainer}>
+        <TouchableOpacity key={image.id} style={[styles.imageContainer, index === 0 ? styles.firstImage : null]}>
           <Image source={{ uri: image.uri }} style={styles.image} />
-        </View>
+        </TouchableOpacity>
       ))}
     </ScrollView>
   );
@@ -28,20 +28,21 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    
   },
   imageContainer: {
     width: windowWidth / 3.2, // Assuming 3 images per row
     height: windowWidth / 3, // Square images
     padding: 6, // Adjust spacing as needed
   },
+  firstImage: {
+    width: (windowWidth / 3.2) * 2, 
+  },
   image: {
     flex: 1,
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
-    borderRadius:5
-
+    borderRadius: 5,
   },
 });
 
