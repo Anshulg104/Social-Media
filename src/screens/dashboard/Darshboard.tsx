@@ -8,6 +8,7 @@ import {
 import { LoginScreen } from "../auth/login/LoginScreen";
 import { ChatScreen } from "../chatScreen/ChatScreen";
 import ProfileScreen from "../ProfileScreen/ProfileScreen";
+import SettingsScreen from "../SettingsScreen/SettingsScreen";
 
 const buttons = [
   { screenName: "OtherScreen1", icon: "earth", size: 28 },
@@ -34,7 +35,7 @@ const Dashboard: React.FC = () => {
       case "chat":
         return <ChatScreen />;
       case "settings":
-        return <LoginScreen />;
+        return <SettingsScreen />;
       default:
         return null;
     }

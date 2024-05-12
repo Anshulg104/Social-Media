@@ -65,11 +65,11 @@ export const ChatScreen = () => {
   }, [input]);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff", paddingTop: 30 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff", paddingTop: 40 }}>
       <View style={styles.container}>
         <View style={styles.searchWrapper}>
           <Text style={styles.title}>Chats</Text>
-          <View style={styles.search}>
+          {/* <View style={styles.search}>
             <View style={styles.searchIcon}>
               <Feather color="#848484" name="search" size={17} />
             </View>
@@ -85,7 +85,7 @@ export const ChatScreen = () => {
               style={styles.searchControl}
               value={input}
             />
-          </View>
+          </View> */}
         </View>
 
         <ScrollView contentContainerStyle={styles.searchContent}>
