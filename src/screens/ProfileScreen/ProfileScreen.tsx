@@ -1,13 +1,17 @@
 import React from 'react'
-import Profiledetails from '../../components/main/profile/profiledetails'
-import Profilepost from '../../components/main/profile/profilepost'
+import Profiledetails from '../../components/main/profile/profileDetails/Profiledetails'
+import Profilepost from '../../components/main/profile/profilePost/Profilepost'
+import { ScrollView } from 'react-native'
 
 
 function ProfileScreen() {
-  return (<>
-  <Profiledetails/>
-   {/* <Profilepost/> post section is under progress */}
-  </>
+  return (
+<ScrollView style={{flex:1 ,paddingHorizontal:10,paddingTop:30}}>
+<Profiledetails/>
+  <Profilepost/>
+</ScrollView>
+
+  
    
   )
 }

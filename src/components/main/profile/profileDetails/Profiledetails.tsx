@@ -17,7 +17,7 @@ const Profiledetails = () => {
           style={styles.profileIcon}
           source={{
             uri: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=256&h=256&q=80",
-          }} // Assuming you have a profile icon image
+          }} 
         />
 
           <View style={styles.avatarNotification} />
@@ -30,14 +30,19 @@ const Profiledetails = () => {
         </View>
        
         </View>
+        <Text style={styles.username}>JohnDoe</Text>
      
       <View style={styles.userInfo}>
-        <Text style={styles.username}>JohnDoe</Text>
+        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5}}>
+          Bio
+        </Text>
         <Text style={styles.bio}>
         Adventurous soul with an eye for beauty in simplicity. 
         Constantly seeking inspiration and growth in life's small wonders.
         </Text>
-       
+        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5}}>
+          Gallery
+        </Text>
       </View>
     </View>
   )
@@ -45,10 +50,7 @@ const Profiledetails = () => {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: "#fff",
-      paddingTop: 52,
-      paddingHorizontal: 24,
+    
     },
     header: {
       alignItems: "center",
@@ -80,7 +82,8 @@ const styles = StyleSheet.create({
     username: {
       fontSize: 20,
       fontWeight: "bold",
-      marginBottom: 10,
+      marginVertical: 10,
+      textAlign:"center"
     },
     bio: {
       fontSize: 16,
