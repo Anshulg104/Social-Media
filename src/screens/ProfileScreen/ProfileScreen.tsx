@@ -7,7 +7,7 @@ import { globalStyles } from '../../globalstyles/globalStyles'
 
 function ProfileScreen() {
   return (
-<ScrollView style={globalStyles.container}>
+<ScrollView style={[globalStyles.container,{paddingHorizontal:10}]}>
 <Profiledetails/>
   <Profilepost/>
 </ScrollView>

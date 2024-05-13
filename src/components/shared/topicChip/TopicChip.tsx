@@ -1,13 +1,13 @@
 import React from 'react'
 import { View,Text, TouchableOpacity } from 'react-native'
 
-const TopicChip = () => {
+const TopicChip = ({text}:any) => {
   return (
    <TouchableOpacity style={{marginLeft:10}}>
   <Text style={{
   fontSize: 16,
   backgroundColor: "#e77e7e",
-  paddingHorizontal: 10,
+  paddingHorizontal: 15,
   paddingVertical: 5,
   borderRadius: 20,
   color: "white",
@@ -20,7 +20,7 @@ const TopicChip = () => {
   shadowRadius: 3.84, // shadow radius
   elevation: 5, // for Android shadow
 }}>
-  Holiday
+  {text}
 </Text>
 
    </TouchableOpacity>
