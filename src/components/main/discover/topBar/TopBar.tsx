@@ -2,7 +2,7 @@ import React from 'react';
 import { globalStyles } from '../../../../globalstyles/globalStyles';
 import { ScrollView, View, Text } from 'react-native';
 import TopicChip from '../../../shared/topicChip/TopicChip';
-import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 const TopBar = () => {
   const topics = ["Fashion", "Food", "Kids", "Shopping","Live"];
@@ -13,7 +13,8 @@ const TopBar = () => {
         <Text style={[globalStyles.title, { paddingHorizontal: 10 }]}>
         Circle
       </Text>
-      <Feather name='search' style={{paddingRight:20}} size={30} color="#e77e7e"/>
+      <AntDesign name='search1' style={{paddingRight:20}} size={26} color="#e77e7e"/>
+      
       </View>
       
 
