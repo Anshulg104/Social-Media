@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, View,StyleSheet, Text, useWindowDimensions } from 'react-native'
+import { Image, View,StyleSheet, Dimensions, useWindowDimensions,Text } from 'react-native'
 import { Feather } from '@expo/vector-icons'; 
 
 const PostCards = () => {
@@ -7,9 +7,25 @@ const PostCards = () => {
     const {width}=useWindowDimensions()
     const postdim=width
   return (
-   <View style={{
-  marginBottom:50
-   }}>
+   <View>
+
+    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+    <View style={styles.profileTop}>
+      <Image
+        alt=""
+        source={{
+          uri: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=256&h=256&q=80",
+        }}
+        style={styles.avatarImg}
+      />
+
+
+      <Text style={styles.profileTitle}>{"Nickolas Miller"}</Text>
+
+  </View>
+  <Feather name='more-vertical' size={24} color="black" />
+    </View>
+
     <Image
     source={{
         uri:"https://images.pexels.com/photos/19674420/pexels-photo-19674420/free-photo-of-woman-in-a-red-sequin-dress-standing-against-a-pillar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -50,14 +66,52 @@ const styles=StyleSheet.create({
        gap:10
 
     },
+    profileTitle: {
+        fontSize:15,
+        fontWeight: "bold",
+        color: "#1d1d1d",
+        marginBottom: 6,
+      },
     actionwrapper:{
         flexDirection:"row" ,
         justifyContent:"space-between",
         alignContent:"center",
         paddingVertical:10,
-        paddingHorizontal:15
-    }
-  
+    },
+     profileTop: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 16,
+        gap:10,
+      },
+      avatar: {
+        position: "relative",
+      },
+      avatarImg: {
+        width: 50,
+        height: 50,
+        borderRadius: 99,
+      },
+      avatarNotification: {
+        position: "absolute",
+        borderRadius: 9999,
+        borderWidth: 2,
+        borderColor: "#fff",
+        bottom: 0,
+        right: -3,
+        width: 21,
+        height: 21,
+        backgroundColor: "#22C55E",
+      },
+      profileBody: {
+        flexGrow: 1,
+        flexShrink: 1,
+        flexBasis: 0,
+        paddingLeft: 16,
+        paddingTop:5,
+      },
+
 })
 
 export default PostCards
