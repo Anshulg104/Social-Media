@@ -7,9 +7,9 @@ const PostCards = () => {
     const {width}=useWindowDimensions()
     const postdim=width
   return (
-   <View>
+   <View style={{marginBottom:40}}>
 
-    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between",paddingHorizontal:15,marginBottom:10}}>
     <View style={styles.profileTop}>
       <Image
         alt=""
@@ -23,7 +23,7 @@ const PostCards = () => {
       <Text style={styles.profileTitle}>{"Nickolas Miller"}</Text>
 
   </View>
-  <Feather name='more-vertical' size={24} color="black" />
+  <Feather name='more-vertical' size={20} color="black" />
     </View>
 
     <Image
@@ -63,7 +63,7 @@ const styles=StyleSheet.create({
     iconstyle:{
        flexDirection:"row",
        alignItems:"center" ,
-       gap:10
+       gap:10,
 
     },
     profileTitle: {
@@ -77,20 +77,20 @@ const styles=StyleSheet.create({
         justifyContent:"space-between",
         alignContent:"center",
         paddingVertical:10,
+        paddingHorizontal:15
     },
      profileTop: {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        marginBottom: 16,
         gap:10,
       },
       avatar: {
         position: "relative",
       },
       avatarImg: {
-        width: 50,
-        height: 50,
+        width: 40,
+        height: 40,
         borderRadius: 99,
       },
       avatarNotification: {
