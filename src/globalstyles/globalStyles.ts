@@ -6,7 +6,6 @@ export const globalStyle = () => {
       flex: 1,
       backgroundColor: "#fff",
       paddingTop: 40,
-      paddingHorizontal:10
       
     },
     formFooter: {

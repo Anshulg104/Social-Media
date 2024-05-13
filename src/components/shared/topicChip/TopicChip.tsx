@@ -3,7 +3,7 @@ import { View,Text, TouchableOpacity } from 'react-native'
 
 const TopicChip = () => {
   return (
-   <TouchableOpacity style={{marginRight:10}}>
+   <TouchableOpacity style={{marginLeft:10}}>
   <Text style={{
   fontSize: 16,
   backgroundColor: "#e77e7e",

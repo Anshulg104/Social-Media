@@ -1,16 +1,18 @@
 import React from 'react'
-import { Image, View,StyleSheet, Dimensions, useWindowDimensions } from 'react-native'
+import { Image, View,StyleSheet, Text, useWindowDimensions } from 'react-native'
 import { Feather } from '@expo/vector-icons'; 
 
 const PostCards = () => {
 
     const {width}=useWindowDimensions()
-    const postdim=width -20
+    const postdim=width
   return (
-   <View>
+   <View style={{
+  marginBottom:50
+   }}>
     <Image
     source={{
-        uri:"https://imgs.search.brave.com/7kEA6safva8DeOYafzp7Xy8hdn3_caKsFwLKwVvgy_Q/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzU4LzQ5LzU0/LzM2MF9GXzc1ODQ5/NTQyNl9nWHdBQkxx/MWxUTWlRWW9tVTQw/a3Y0aXFsNGJjMEJL/dy5qcGc"
+        uri:"https://images.pexels.com/photos/19674420/pexels-photo-19674420/free-photo-of-woman-in-a-red-sequin-dress-standing-against-a-pillar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }}
     style={{width:postdim,height:postdim }}
     />
@@ -23,7 +25,14 @@ const PostCards = () => {
     
 <Feather name='bookmark' size={24} color="black"/>
 </View>
-
+<View style={{width:"90%",paddingLeft:15}}>
+    <Text style={{fontWeight:"700",marginBottom:5}}>
+        1200 Likes
+    </Text>
+<Text>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni cum consectetur distinctio.
+</Text>
+</View>
 
    </View>
   )
@@ -37,13 +46,16 @@ const styles=StyleSheet.create({
     },
     iconstyle:{
        flexDirection:"row",
-       alignItems:"center" 
+       alignItems:"center" ,
+       gap:10
+
     },
     actionwrapper:{
         flexDirection:"row" ,
         justifyContent:"space-between",
         alignContent:"center",
         paddingVertical:10,
+        paddingHorizontal:15
     }
   
 })
