@@ -2,15 +2,21 @@ import React from 'react';
 import { globalStyles } from '../../../../globalstyles/globalStyles';
 import { ScrollView, View, Text } from 'react-native';
 import TopicChip from '../../../shared/topicChip/TopicChip';
+import { Feather } from '@expo/vector-icons';
 
 const TopBar = () => {
   const topics = ["Fashion", "Food", "Kids", "Shopping","Live"];
 
   return (
     <View>
-      <Text style={[globalStyles.title, { paddingHorizontal: 10 }]}>
+      <View style={{flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
+        <Text style={[globalStyles.title, { paddingHorizontal: 10 }]}>
         Circle
       </Text>
+      <Feather name='search' style={{paddingRight:20}} size={30} color="#e77e7e"/>
+      </View>
+      
+
       <Text style={{ fontSize: 18, fontWeight: "700", paddingHorizontal: 10 }}>
         Topics
       </Text>
