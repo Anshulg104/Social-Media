@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, View,StyleSheet, Dimensions, useWindowDimensions } from 'react-native'
+import { Image, View,StyleSheet, Dimensions, useWindowDimensions,Text } from 'react-native'
 import { Feather } from '@expo/vector-icons'; 
 
 const PostCards = () => {
@@ -9,8 +9,8 @@ const PostCards = () => {
   return (
    <View>
 
-<View style={styles.profileTop}>
-    <View style={styles.avatar}>
+    <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+    <View style={styles.profileTop}>
       <Image
         alt=""
         source={{
@@ -19,18 +19,13 @@ const PostCards = () => {
         style={styles.avatarImg}
       />
 
-      <View style={styles.avatarNotification} />
-    </View>
 
-    <View style={styles.profileBody}>
       <Text style={styles.profileTitle}>{"Nickolas Miller"}</Text>
 
-      
-    </View>
   </View>
+  <Feather name='more-vertical' size={24} color="black" />
+    </View>
 
-
-    
     <Image
     source={{
         uri:"https://imgs.search.brave.com/7kEA6safva8DeOYafzp7Xy8hdn3_caKsFwLKwVvgy_Q/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA3LzU4LzQ5LzU0/LzM2MF9GXzc1ODQ5/NTQyNl9nWHdBQkxx/MWxUTWlRWW9tVTQw/a3Y0aXFsNGJjMEJL/dy5qcGc"
@@ -62,6 +57,12 @@ const styles=StyleSheet.create({
        flexDirection:"row",
        alignItems:"center" 
     },
+    profileTitle: {
+        fontSize:15,
+        fontWeight: "bold",
+        color: "#1d1d1d",
+        marginBottom: 6,
+      },
     actionwrapper:{
         flexDirection:"row" ,
         justifyContent:"space-between",
@@ -70,14 +71,18 @@ const styles=StyleSheet.create({
     },
      profileTop: {
         flexDirection: "row",
-        alignItems: "flex-start",
+        alignItems: "center",
         justifyContent: "space-between",
         marginBottom: 16,
+        gap:10,
+      },
+      avatar: {
+        position: "relative",
       },
       avatarImg: {
-        width: 60,
-        height: 60,
-        borderRadius: 9999,
+        width: 50,
+        height: 50,
+        borderRadius: 99,
       },
       avatarNotification: {
         position: "absolute",
@@ -85,7 +90,7 @@ const styles=StyleSheet.create({
         borderWidth: 2,
         borderColor: "#fff",
         bottom: 0,
-        right: -2,
+        right: -3,
         width: 21,
         height: 21,
         backgroundColor: "#22C55E",
@@ -95,7 +100,7 @@ const styles=StyleSheet.create({
         flexShrink: 1,
         flexBasis: 0,
         paddingLeft: 16,
-        paddingTop:16,
+        paddingTop:5,
       },
 
 })

@@ -10,6 +10,7 @@ const DiscoverScreen = () => {
     <View style={globalStyles.container}>
       
 <TopBar/>
+
 <PostCards/>
     </View>
   );
