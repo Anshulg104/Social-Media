@@ -10,6 +10,7 @@ import { ChatScreen } from "../chatScreen/ChatScreen";
 import ProfileScreen from "../ProfileScreen/ProfileScreen";
 import SettingsScreen from "../SettingsScreen/SettingsScreen";
 import PostScreen from "../post/PostScreen";
+import Discover from "../DiscoverScreen/Discover";
 
 const buttons = [
   { screenName: "Home", icon: "earth", size: 28 },
@@ -26,7 +27,7 @@ const Dashboard: React.FC = () => {
   const renderScreen = () => {
     switch (activeScreen) {
       case "Home":
-        return <LoginScreen />;
+        return <Discover />;
       case "add":
         return <PostScreen />;
       case "profile":
