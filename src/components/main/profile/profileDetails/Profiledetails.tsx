@@ -33,17 +33,17 @@ const Profiledetails = () => {
        
         </View>
         <Text style={styles.username}>JohnDoe</Text>
-        <Text style={styles.gmail}><Feather name="phone" size={14} color="black" />&nbsp;8101844250</Text>
+        <Text style={styles.gmail}><Feather name="phone" size={14} color="#e77e7e" />&nbsp;8101844250</Text>
      
       <View style={styles.userInfo}>
-        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5}}>
+        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5,color:"#e77e7e"}}>
           Bio
         </Text>
         <Text style={styles.bio}>
         Adventurous soul with an eye for beauty in simplicity. 
         Constantly seeking inspiration and growth in life's small wonders.
         </Text>
-        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5,marginTop:10}}>
+        <Text style={{fontSize:18,fontWeight:"600",marginBottom:5,marginTop:10,color:"#e77e7e"}}>
           Posts
         </Text>
       </View>
@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "bold",
       textAlign:"center",
-      marginTop:5
+      marginTop:5,
+      color:"#e77e7e",
     },
     gmail: {
       fontSize: 14,

@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "700",
-    color: "#1d1d1d",
+    color: "#e77e7e",
     marginBottom: 12,
   },
   /** Search */
@@ -229,7 +229,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#000",
+    color: "#e77e7e",
   },
   cardMessage: {
     fontSize: 15,
