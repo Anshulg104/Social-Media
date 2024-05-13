@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import {
-  Button,
+  
   Image,
   View,
   TextInput,
+  Text,
   StyleSheet,
   SafeAreaView,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import UploadImage from "../../components/main/post/uploadImage/UploadImage";
+import Button from "../../components/shared/button/Button"; 
+import ProfileTop from "../../components/shared/profiletop/ProfileTop";
 
 export default function PostCreationPage() {
   const [title, setTitle] = useState("");
@@ -30,43 +33,43 @@ export default function PostCreationPage() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>New Post</Text>
+      <ProfileTop/>
+     
       <TextInput
-        style={styles.input}
-        value={title}
-        onChangeText={setTitle}
-        placeholder="Enter title"
-      />
-      <TextInput
-        style={[styles.input, { height: 100 }]}
+        style={[styles.input, { height: 80 }]}
         value={description}
         onChangeText={setDescription}
-        placeholder="Enter description"
+        placeholder="Say About something about  this photo"
         multiline
       />
       <UploadImage />
-      <Button title="Post" onPress={() => console.log("Posting...")} />
+      <Button text="Post" onPress={() => console.log("Posting...")} />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     padding: 40,
-    alignItems: "center",
-    justifyContent: "center",
+    flex:1 ,
+    paddingHorizontal:30,
+    paddingTop:48,
     backgroundColor: "#fff",
+  },
+
+  title: {
+    fontSize: 32,
+    fontWeight: "700",
+    color: "#e77e7e",
+    marginBottom: 20,
+    
   },
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
     padding: 10,
-    marginBottom: 20,
+    marginBottom:10,
     width: "100%",
-  },
-  image: {
-    width: 200,
-    height: 200,
-    marginTop: 20,
-  },
+  }
 });

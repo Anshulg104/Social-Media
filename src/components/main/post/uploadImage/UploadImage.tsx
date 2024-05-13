@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Image, View, StyleSheet, ScrollView } from "react-native";
 import * as ImagePicker from "expo-image-picker";
+import { Feather } from '@expo/vector-icons'; 
 
 export default function UploadImage() {
   const [images, setImages] = useState([]);
@@ -23,12 +24,14 @@ export default function UploadImage() {
 
   return (
     <View style={styles.container}>
-      <Button title="Pick images from camera roll" onPress={pickImage} />
-      <View style={{ flexWrap: "wrap", flexDirection: "row", height: 100 }}>
+      {/* <Button title="Pick images from camera roll" onPress={pickImage} /> */}
+      <View style={{ flexWrap: "wrap", flexDirection: "row", height: 100,borderRadius:20 }}>
         {images.map((uri, index) => (
           <Image key={index} source={{ uri }} style={styles.image} />
         ))}
       </View>
+      <Feather name="image" size={40} onPress={pickImage} color="#e77e7e" />
+    
     </View>
   );
 }
@@ -36,7 +39,8 @@ export default function UploadImage() {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    justifyContent: "center",
+    flexDirection:"row",
+    justifyContent: "flex-start",
     marginBottom: 150,
   },
   image: {
