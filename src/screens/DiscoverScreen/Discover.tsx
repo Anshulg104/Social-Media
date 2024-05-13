@@ -1,11 +1,16 @@
-import React from 'react'
-import ProfileTop from '../../components/shared/profiletop/ProfileTop'
+import React from 'react';
+import { View, ScrollView, Text } from 'react-native';
+import { globalStyles } from '../../globalstyles/globalStyles';
+import TopicChip from '../../components/shared/topicChip/TopicChip';
+import TopBar from '../../components/main/discover/topBar/TopBar';
 
-const Discover = () => {
+const DiscoverScreen = () => {
   return (
-   <ProfileTop/>
-   
-  )
-}
+    <View style={globalStyles.container}>
+      
+<TopBar/>
+    </View>
+  );
+};
 
-export default Discover
+export default DiscoverScreen;
