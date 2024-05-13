@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Image, View, StyleSheet, ScrollView } from "react-native";
+import { Button, Image, View, StyleSheet, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { Feather } from '@expo/vector-icons'; 
 
@@ -26,11 +26,11 @@ export default function UploadImage() {
     <View style={styles.container}>
       {/* <Button title="Pick images from camera roll" onPress={pickImage} /> */}
       <View style={{ flexWrap: "wrap", flexDirection: "row", height: 100,borderRadius:20 }}>
+        <Feather name="image" size={40} onPress={pickImage} color="#e77e7e" />
         {images.map((uri, index) => (
           <Image key={index} source={{ uri }} style={styles.image} />
         ))}
       </View>
-      <Feather name="image" size={40} onPress={pickImage} color="#e77e7e" />
     
     </View>
   );
@@ -47,5 +47,6 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     marginHorizontal: 5,
+    borderRadius:5
   },
 });
