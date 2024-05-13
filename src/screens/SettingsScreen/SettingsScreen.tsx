@@ -3,13 +3,14 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import SettingsCard from '../../components/main/Settings/SettingsCards/SettingsCards';
+import { globalStyles } from '../../globalstyles/globalStyles';
 
 // Settings screen component
 const SettingsScreen = () => {
-  const navigation = useNavigation();
+  const navigation:any = useNavigation();
 
   // Function to navigate to different settings screens
-  const navigateToScreen = (screenName) => {
+  const navigateToScreen = ({screenName}:any) => {
     navigation.navigate(screenName);
   };
 
@@ -17,7 +18,7 @@ const SettingsScreen = () => {
   
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={globalStyles.container}>
 
      <Text style={styles.title}>Settings</Text>
       <SettingsCard

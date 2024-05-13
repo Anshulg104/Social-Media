@@ -1,17 +1,18 @@
-import React from 'react'
-import ProfileTop from '../../components/shared/profiletop/ProfileTop'
-import PostCards from '../../components/shared/PostCards/PostCards'
-import { ScrollView } from 'react-native'
+import React from 'react';
+import { View, ScrollView, Text } from 'react-native';
+import { globalStyles } from '../../globalstyles/globalStyles';
+import TopicChip from '../../components/shared/topicChip/TopicChip';
+import TopBar from '../../components/main/discover/topBar/TopBar';
+import PostCards from '../../components/shared/PostCards/PostCards';
 
-const Discover = () => {
+const DiscoverScreen = () => {
   return (
-    <ScrollView style={{flex: 1, backgroundColor: "#fff", paddingTop: 50,paddingHorizontal:30}}>
-         {/* <ProfileTop/> */}
-   <PostCards/>
-    </ScrollView>
-  
-   
-  )
-}
+    <View style={globalStyles.container}>
+      
+<TopBar/>
+<PostCards/>
+    </View>
+  );
+};
 
-export default Discover
+export default DiscoverScreen;
