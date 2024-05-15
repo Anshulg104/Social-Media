@@ -13,7 +13,7 @@ import * as SplashScreen from "expo-splash-screen";
 export { ErrorBoundary } from "expo-router";
 
 export const unstable_settings = {
-  initialRouteName: "wellcomePage",
+  initialRouteName: "index",
 };
 
 export default function RootLayout() {
@@ -36,23 +36,19 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={DefaultTheme}>
-      <View style={{ flex: 1 }}>
         <RootLayoutNav />
-      </View>
-    </ThemeProvider>
   );
 }
 
 function RootLayoutNav() {
-  const colorScheme = useColorScheme();
 
   return (
-    <Stack>
+    <Stack initialRouteName="login">
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="login" options={{ headerShown: false }} />
       <Stack.Screen name="home" options={{ headerShown: false }} />
       <Stack.Screen name="signup" options={{ headerShown: false }} />
+      <Stack.Screen name="[...unmatched]" options={{ headerShown: false }} />
     </Stack>
   );
 }
